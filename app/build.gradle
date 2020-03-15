@@ -1,0 +1,125 @@
+//buildscript {
+//	repositories {
+//		maven { url 'https://maven.fabric.io/public' }
+//	}
+//
+//	dependencies {
+//		classpath 'io.fabric.tools:gradle:1.+'
+//	}
+//}
+
+apply plugin: 'com.android.application'
+//apply plugin: 'io.fabric'
+
+ext.versions = [
+		// Android
+		targetSdkVersion: 28,
+		minSdkVersion   : 21,
+		buildtools      : "28.0.3",
+		support         : "28.0.0",
+
+		//Timber
+		timber          : "4.7.0",
+]
+
+def versionMajor = 0
+def versionMinor = 7
+def versionPatch = 17
+
+android {
+	compileSdkVersion versions.targetSdkVersion
+	buildToolsVersion versions.buildtools
+	defaultConfig {
+		applicationId "com.dimowner.audiorecorder"
+		minSdkVersion versions.minSdkVersion
+		targetSdkVersion versions.targetSdkVersion
+		versionCode versionMajor * 10000 + versionMinor * 100 + versionPatch
+		versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+//		vectorDrawables.useSupportLibrary = true
+	}
+
+//	def keystorePropertiesFile = rootProject.file("keystore.properties")
+//	def keystoreProperties = new Properties()
+//	keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+
+	signingConfigs {
+		dev {
+			storeFile file('key/debug/debug.keystore')
+			storePassword 'android'
+			keyAlias 'androiddebugkey'
+			keyPassword 'android'
+		}
+//		release {
+//			storeFile file(keystoreProperties['prodStoreFile'])
+//			storePassword keystoreProperties['prodStorePassword']
+//			keyAlias keystoreProperties['prodKeyAlias']
+//			keyPassword keystoreProperties['prodKeyPassword']
+//		}
+	}
+
+	buildTypes {
+		release {
+			minifyEnabled true
+			shrinkResources true
+			useProguard true
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+		debug {
+			minifyEnabled false
+		}
+	}
+
+	flavorDimensions "default"
+
+	productFlavors {
+		debugConfig {
+			dimension "default"
+			applicationId "com.dimowner.audiorecorder.debug"
+			minSdkVersion versions.minSdkVersion
+			targetSdkVersion versions.targetSdkVersion
+			signingConfig = signingConfigs.dev
+		}
+		releaseConfig {
+			dimension "default"
+			signingConfig = signingConfigs.dev
+			applicationId "com.dimowner.audiorecorder"
+			minSdkVersion versions.minSdkVersion
+			targetSdkVersion versions.targetSdkVersion
+		}
+	}
+
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_7
+		targetCompatibility JavaVersion.VERSION_1_7
+	}
+
+	lintOptions {
+		abortOnError false
+	}
+}
+
+repositories {
+	maven { url 'https://maven.fabric.io/public' }
+}
+
+// Remove not needed buildVariants.
+android.variantFilter { variant ->
+	if (variant.buildType.name == 'release'
+			&& variant.getFlavors().get(0).name == 'debugConfig') {
+		variant.setIgnore(true)
+	}
+	if (variant.buildType.name == 'debug'
+			&& variant.getFlavors().get(0).name == 'releaseConfig') {
+		variant.setIgnore(true)
+	}
+}
+
+dependencies {
+	//Timber
+	implementation "com.jakewharton.timber:timber:$versions.timber"
+	implementation "com.android.support:recyclerview-v7:$versions.support"
+
+//	implementation('com.crashlytics.sdk.android:crashlytics:2.9.8@aar') {
+//		transitive = true
+//	}
+}

@@ -1,0 +1,146 @@
+<resources>
+	<!--<string name="app_name">Audio Recorder</string>-->
+	<string name="app_name">Аудио Рекордер</string>
+
+	<string name="records">Записи</string>
+	<string name="settings">Настройки</string>
+	<string name="rate_app">Оценить приложение</string>
+	<string name="store_records_public">Хранить записи в публичной директории</string>
+	<string name="record_in_stereo">Записывать в Стерео</string>
+	<string name="keep_screen_on">Оставлять экран включенным во время записи</string>
+	<string name="total_duration">Суммарная длительность записей: %s</string>
+	<string name="total_record_count">Суммарное количество записей: %d</string>
+	<string name="available_space">Доступное место: %s</string>
+	<string name="delete_all">Удалить все записи</string>
+	<string name="delete_all2">Удалить все</string>
+	<string name="records_was_removed">Некоторые записи не были найдены в папке с записями. Возможно они были удалены или перемещены.</string>
+	<string name="warning">Внимание!</string>
+	<string name="delete_this_record">Удалить эту запись?</string>
+	<string name="delete_record">Переместить в корзину %s?</string>
+	<string name="delete_record_forever">Удалить запись %s навсегда?</string>
+	<string name="restore_record">Востановить запись %s?</string>
+	<string name="delete_all_records">Удалить все записи?</string>
+	<string name="all_records_deleted">Все записи удалены успешно</string>
+	<string name="failed_to_delete_all_records">Ошибка при удалении всех записей</string>
+	<string name="please_select_record_to_share">Пожалуйста, выберите или запишите аудио файл для распространения</string>
+	<string name="record_name">Новое имя</string>
+	<string name="recording">Запись: %s</string>
+	<string name="recording_is_on">Запись включена</string>
+	<string name="recording_progress">Запись&#8230;</string>
+	<string name="recording_paused">Пауза</string>
+	<string name="playback">Воспроизведение: %s</string>
+	<string name="zero_time">00:00</string>
+	<string name="empty">Пусто</string>
+	<string name="no_records">Нет записей.</string>
+	<string name="no_bookmarks">Нет закладок.</string>
+	<string name="bookmarks">Закладки</string>
+	<string name="share_record">Поделиться записью: %s</string>
+	<string name="import_progress">Импортирование аудио файла&#8230;</string>
+	<string name="record_processing">Обработка запися для отображения&#8230;</string>
+	<string name="request">Обратная связь</string>
+	<string name="email_clients_not_found">Не найдено ни одного почтового клиента</string>
+	<string name="send_email">Послать по электронной почте&#8230;</string>
+	<string name="open_record_with">Открыть %s с помощью</string>
+	<string name="delete">Удалить</string>
+	<string name="info">Информация</string>
+	<string name="rename">Переименовать</string>
+	<string name="dont_ask_again_rename">Больше не показывать переименование</string>
+	<string name="open_with">Открыть с помощью&#823;</string>
+	<string name="download">Скачать</string>
+	<string name="share">Поделиться</string>
+	<string name="ask_to_rename">Показывать диалог переименования после завершения записи</string>
+	<string name="record_moved_into_trash">Запись перемещена в корзину</string>
+	<string name="all_records_deleted_successfully">Все записи удалены успешно</string>
+	<string name="record_deleted_successfully">Запись удалена успешно</string>
+	<string name="record_restored_successfully">Запись восстановлено успешно</string>
+	<string name="by_date">По дате</string>
+	<string name="by_name">По имени</string>
+	<string name="by_duration">По длительности</string>
+	<string name="need_write_permission">Приложению требуется разрешение на запись в публичное хранилище. Если не разрешить, записи будут сохраняться в приватном каталоге приложения</string>
+	<string name="rec_name">Название:</string>
+	<string name="rec_format">Формат:</string>
+	<string name="rec_duration">Длительность:</string>
+	<string name="rec_frequency">Частота:</string>
+	<string name="rec_size">Размер:</string>
+	<string name="rec_created">Дата создания:</string>
+	<string name="rec_location">Расположение файла:</string>
+	<string name="naming">Именование:</string>
+	<string name="private_dir_warning">Записи будут сохранятся в приватной директории приложения, невидимой для других приложений.</string>
+	<string name="public_dir_warning">Записи будут сохранятся в обычной директории устройства, видимой другим приложениям.</string>
+	<string name="lost_records">Потеряные записи</string>
+	<string name="trash">Корзина</string>
+	<string name="trash_info">Запись помещенная в корзину автоматически будет удалена навсегда через 60 дней.</string>
+
+	<string name="app_settings">Настройки приложения:</string>
+	<string name="recording_settings">Настройки записи:</string>
+	<string name="other_settings">Другое:</string>
+
+	<string name="today">Сегодня</string>
+	<string name="yesterday">Вчера</string>
+
+	<string name="btn_save">Сохранить</string>
+	<string name="btn_cancel">Отменить</string>
+	<string name="btn_yes">Да</string>
+	<string name="btn_ok">Хорошо</string>
+	<string name="btn_no">Нет</string>
+	<string name="btn_play">Играть</string>
+	<string name="btn_deny">Запретить</string>
+	<string name="btn_allow">Разрешить</string>
+	<string name="btn_details">Детали</string>
+
+	<string name="error_unknown">Неожиданная ошибка</string>
+	<string name="error_cant_create_file">Не удалось создать файл</string>
+	<string name="error_invalid_output_file">Неверный выходной файл</string>
+	<string name="error_file_exists">Файл с таким именем уже существует!</string>
+	<string name="error_failed_to_rename">Ошибка при переименовании записи!</string>
+	<string name="error_failed_to_init_recorder">Не удалось инициализировать рекордер</string>
+	<string name="error_failed_to_init_player">Не удалось инициализировать проигрыватель</string>
+	<string name="error_player_data_source">Проигрыватель не может считать файл</string>
+	<string name="error_unable_to_read_sound_file">Не удалось считать аудио файл</string>
+	<string name="error_permission_denied">Доступ запрещен</string>
+	<string name="error_process_waveform">Не удалось отобразить аудиофайл</string>
+	<string name="error_lost_records">Некоторые ваши записи были удалены или перемещены</string>
+	<string name="error_no_available_space">Нет доступной памяти!</string>
+
+	<!-- Shown in the 'About' window of the app. -->
+	<string name="about_body"><![CDATA[
+    	<b>Аудио Рекордер 2019</b><br>
+		Версия %s
+	]]></string>
+	<!--<a href="http://#/">Application site</a>-->
+
+	<string-array name="theme_colors">
+		<item>Тама Не выбрано</item>
+		<item>Тема Черная</item>
+		<item>Тема Бирюзовая</item>
+		<item>Тема Голубая</item>
+		<item>Тема Темно Фиолетовая</item>
+		<item>Тема Розовая</item>
+		<item>Тема Темно Оранжевая</item>
+		<item>Тема Красная</item>
+		<item>Тема Коричневая</item>
+		<item>Тема Сине-серая</item>
+	</string-array>
+
+	<string-array name="formats">
+		<item>Формат: M4a</item>
+		<item>Формат: Wav</item>
+	</string-array>
+
+	<string-array name="sample_rates">
+		<item>Частота: 8000 Гц</item>
+		<item>Частота: 16000 Гц</item>
+		<item>Частота: 32000 Гц</item>
+		<item>Частота: 44100 Гц</item>
+		<item>Частота: 48000 Гц</item>
+	</string-array>
+
+	<string-array name="bit_rates">
+		<item>Битрейт: 24 кбит/с</item>
+		<item>Битрейт: 48 кбит/с</item>
+		<item>Битрейт: 96 кбит/с</item>
+		<item>Битрейт: 128 кбит/с</item>
+		<item>Битрейт: 192 кбит/с</item>
+	</string-array>
+
+</resources>
