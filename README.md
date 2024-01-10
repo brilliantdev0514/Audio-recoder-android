@@ -1,3 +1,5 @@
+This project is sponsored by Browserstack.
+
 Audio-Recorder
 =========================
 Introduction
